@@ -5,7 +5,7 @@ exports.handler = function (event, ctx, callback) {
     let x = parseInt(Math.random() * 500, 10);
     callback(null, {
       statusCode: 200,
-      body: `Random number: ${x}`,
+      body: JSON.stringify(`Random number: ${x}`),
     });
   } else if (event.httpMethod == "POST") {
     console.log("post mehtod used");
